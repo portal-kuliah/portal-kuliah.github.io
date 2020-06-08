@@ -1,0 +1,290 @@
+  
+
+  <title>Lecture Notes Machine Learning</title>
+  <link rel="shortcut icon" href="assets/img/fav.png">
+    <!-- TITLE-->
+
+<style type="text/css">
+:root{ --sidebar-width: 200px; }
+
+body{
+  margin: 0;
+  font-family: Helvetica, "Segoe UI", Helvetica;
+}
+
+nav{
+  /*background-color: pink;*/
+  width: 98vw;
+  height: 275px;
+/*  border-bottom: 3px solid black;
+*/  /*opacity: 0.6;*/
+}
+#navlinks-div{
+  height: 85%;
+} 
+main{
+/*  background-color: lightgreen;*/
+  margin-top: -10px;
+}
+
+@media (min-width: 815px){
+  nav{
+    position:fixed;
+    width: var(--sidebar-width);
+    height: 100vh;
+    border-right: 3px solid black;
+  }
+  #navlinks-div{
+    height: 88%;
+  } 
+  main{
+    /*background-color: gray;*/
+    margin-left: var(--sidebar-width);
+  }
+}
+
+
+#navlinks-div{
+  overflow: auto;
+}
+
+.nav-link, #nav-header{
+  display: block;
+/*  border-top: 1px solid black;
+*/  /*background-color: white;*/
+  width: 100%;
+  padding: 0.3em 0.3em 0.3em 1.5em;
+  box-sizing: border-box;
+}
+.nobull {
+  list-style-type: none;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  margin-left: -10%;
+ }
+
+#nav-header{ padding-left: 0.7em;}
+a.nav-link:link, a.nav-link:visited{
+  color: black;
+  text-decoration: none;
+}
+a.nav-link:hover, a.nav-link:active{
+  color: blue;
+  text-decoration: none;
+/*  background-color: lightgray;
+*/}
+
+.main-section{
+  margin: 8px 10px 8px 50px;
+  padding: 10px;
+  /*background-color: dodgerblue;*/
+}
+
+.top-link{
+  display: block;
+  text-align: right;
+  color: #595959;
+  font-size: 0.8em;
+  text-decoration: none;
+/*  color: red;
+  background-color: yellow;*/
+}
+@media(min-width: 815px){
+    .top-link {
+    display: none;
+    background-color: pink;
+  }
+
+}
+
+/*.main-section>p{
+  background-color: purple;
+}*/
+.main-section>header{
+  margin-left: -20px;
+}
+
+header{
+  font-size: 1.7em;
+  font-weight: 500;
+  border-bottom: solid lightgray;
+
+   
+}
+
+code{
+  background-color: lightgray;
+  padding: 2px;
+  border-radius: 3px;
+  color: darkred;
+}
+
+.codeblock{
+  padding: 8px;
+  display: block;
+  overflow-x: auto;
+}
+h3{
+  font-weight: 500;
+}  
+</style>
+<nav id="navbar">
+  <div id="nav-header-div">
+    <!-- <header id="nav-header">
+      CSS Cheatsheet
+    </header> -->
+  </div>
+  <div id="navlinks-div" style="margin-top:5%; ">
+  <a href="index.html"><img style="width: 90%;" src="assets/img/back_home.png" alt="" title=""  /></a>
+  <div id="navlinks-div" style="margin-top: 5%;">
+  <!-- 
+    <a href="#Artificial_Inteligence" class="nav-link">Artificial Inteligence</a>
+  <div id="navlinks-div">
+    <a href="#Preface" class="nav-link">Preface</a> -->
+  
+  <div id="navlinks-div">
+    <a href="#" onclick="test('Pengenalan_Machine_Learning');"  class="nav-link">1. Machine Learning</a>
+    <ul class="nobull">
+      <li><a href="#" onclick="test('NumPy_Matplotlib_Scikit');" class="nav-link">1.1-Pengenalan Tools</a></li>
+      <li> <a href="#" onclick="test('Pengenalan_Machine_Learning');" class="nav-link">1.2-Pengenalan Machine Learning</a>
+      </li>
+    </ul>
+   
+    <a href="#" onclick="test('Linear_Regression');" class="nav-link">2. Regression</a>
+    <ul class="nobull">
+      <li><a href="#" onclick="test('Linear_Regression');" class="nav-link">2.1-Linear Regression</a></li>
+      <li> <a href="#" onclick="test('Polynomial_Regression');" class="nav-link">2.2-Polynomial Regression</a>
+      </li>
+      <li> <a href="#" onclick="test('Logistic_Regression');"  class="nav-link">2.3-Logistic Regression</a>
+      </li>
+    </ul>
+
+    <a href="#" onclick="test('PCA');" class="nav-link">3. Principal Component Analysis dan Linear Discriminant Analysis</a>
+    <ul class="nobull">
+      <li><a href="#" onclick="test('PCA');" class="nav-link">3.1-PCA</a></li>
+      <li> <a href="#" onclick="test('LDA');" class="nav-link">3.2-LDA</a>
+      </li>
+    </ul>
+
+    <a href="#" onclick="test('Classification_and_Regression_Trees');" class="nav-link">4. Classification and Regression Trees</a>
+    
+    <a href="#" onclick="test('K-Means_Clustering');" class="nav-link">5. Unsupervised Learning - K-Means Clustering</a>
+      <a href="#" onclick="test('Neuron_dan_Perceptron');" class="nav-link">6. Neural Networks</a>
+    <ul class="nobull">
+      <li><a href="#" onclick="test('Neuron_dan_Perceptron');" class="nav-link">6.1-Neuron dan Perceptron</a></li>
+      <li> <a href="#" onclick="test('Perceptron_-AND-');" class="nav-link">6.2-Perceptron -AND-</a>
+      </li>
+      <li> <a href="#" onclick="test('Multi_Layer_Perceptron');" class="nav-link">6.3-Multi Layer Perceptron</a>
+      </li>
+      </ul> 
+      <a href="#" onclick="test('Deep_Learning_-_Convolutional_Neural_Network');" class="nav-link">7. Deep Learning - Convolutional Neural Network</a>
+    <a href="#" onclick="test('Naive_Bayes_Classifier');" class="nav-link">8. Naive Bayes Classifier</a>
+    <a href="#" onclick="test('Cascade_Classifier');" class="nav-link">9. Cascade Classifier</a>
+    
+    <!-- <a href="#Icons" class="nav-link">Icons</a> -->
+  </div>
+
+</nav>
+ 
+<main id="main-doc">
+
+ <div id ='Pengenalan_Machine_Learning' style="display: block;">
+ <object data="lecture_ml/1_machineLearning.html" width="100%" height="100%"></object>
+  <!-- <div data-include="lecture_ml/1_machineLearning.html"></div> -->
+</div>
+
+ <div id ='NumPy_Matplotlib_Scikit' style="display: none;">
+ <object data="lecture_ml/1_introductionNumpy.html" width="100%" height="100%"></object>
+   <!-- {% include 'lecture_ml/1_introductionNumpy.html'%} -->
+</div>
+
+<div id ='Linear_Regression' style="display: none;">
+  <object data="lecture_ml/2_1-linearRegression.html" width="100%" height="100%"></object>
+   <!-- {% include 'lecture_ml/2_1-linearRegression.html'%} -->
+</div>
+
+<div id ='Polynomial_Regression' style="display: none;">
+  <object data="lecture_ml/2_2-polynomialRegression.html" width="100%" height="100%"></object>
+   <!-- {% include 'lecture_ml/2_2-polynomialRegression.html'%} -->
+</div>
+
+<div id ='Logistic_Regression' style="display: none;">
+  <object data="lecture_ml/2_3-logisticRegression.html" width="100%" height="100%"></object>
+   <!-- {% include 'lecture_ml/2_3-logisticRegression.html'%} -->
+</div>
+
+<div id ='PCA' style="display: none;">
+  <object data="lecture_ml/3_1-PCA.html" width="100%" height="100%"></object>
+   <!-- {% include 'lecture_ml/3_1-PCA.html'%} -->
+</div>
+
+<div id ='LDA' style="display: none;">
+  <object data="lecture_ml/3_2-LDA.html" width="100%" height="100%"></object>
+   <!-- {% include 'lecture_ml/3_2-LDA.html'%} -->
+</div>
+
+<div id ='Classification_and_Regression_Trees' style="display: none;">
+  <object data="lecture_ml/4_1-CART.html" width="100%" height="100%"></object>
+   <!-- {% include 'lecture_ml/4_1-CART.html'%} -->
+</div>
+
+<div id ='K-Means_Clustering' style="display: none;">
+  <object data="lecture_ml/5_1-kMeans.html" width="100%" height="100%"></object>
+   <!-- {% include 'lecture_ml/5_1-kMeans.html'%} -->
+</div>
+
+<div id ='Neuron_dan_Perceptron' style="display: none;">
+  <object data="lecture_ml/6_1-neuron.html" width="100%" height="100%"></object>
+   <!-- {% include 'lecture_ml/6_1-neuron.html'%} -->
+</div>
+
+<div id ='Perceptron_-AND-' style="display: none;">
+  <object data="lecture_ml/contohPerceptronAND.html" width="100%" height="100%"></object>
+   <!-- {% include 'lecture_ml/contohPerceptronAND.html'%} -->
+</div>
+
+<div id ='Multi_Layer_Perceptron' style="display: none;">
+  <object data="lecture_ml/6_2-MLP.html" width="100%" height="100%"></object>
+   <!-- {% include 'lecture_ml/6_2-MLP.html'%} -->
+</div>
+
+<div id ='Deep_Learning_-_Convolutional_Neural_Network' style="display: none;">
+  <object data="lecture_ml/7_1-CNN.html" width="100%" height="100%"></object>
+   <!-- {% include 'lecture_ml/7_1-CNN.html'%} -->
+</div>
+
+<div id ='Naive_Bayes_Classifier' style="display: none;">
+  <object data="lecture_ml/8_1-NaiveBayes.html" width="100%" height="100%"></object>
+   <!-- {% include 'lecture_ml/8_1-NaiveBayes.html'%} -->
+</div>
+
+<div id ='Cascade_Classifier' style="display: none;">
+  <object data="lecture_ml/9_1-Adaboost.html" width="100%" height="100%"></object>
+   <!-- {% include 'lecture_ml/9_1-Adaboost.html'%} -->
+</div>
+
+
+
+  </main>
+
+
+
+<script type="text/javascript">
+  function test(id){
+    var list=['NumPy_Matplotlib_Scikit','Pengenalan_Machine_Learning','Linear_Regression','Polynomial_Regression','Logistic_Regression','PCA','LDA','Classification_and_Regression_Trees','K-Means_Clustering','Neuron_dan_Perceptron','Perceptron_-AND-','Multi_Layer_Perceptron','Deep_Learning_-_Convolutional_Neural_Network','Naive_Bayes_Classifier','Cascade_Classifier'];
+    var i;
+
+    for (i=0;i<list.length;i++){
+        
+        if (list[i] != id){
+          var e=document.getElementById(list[i]);
+          e.style.display='none';
+        } 
+        else{
+          var e=document.getElementById(id);
+          e.style.display='block';
+        }  
+    }
+    
+  }
+</script>
